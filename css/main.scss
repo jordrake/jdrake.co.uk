@@ -1,0 +1,38 @@
+---
+---
+
+@import "pure-blog";
+@import "syntax";
+
+a.plain-link {
+  text-decoration: none;
+  color: inherit;
+
+  &:hover, &:active, &:visited, &:focus {
+    text-decoration: none;
+    color: inherit;
+  }
+}
+
+.avatar {
+  max-width: 15vw;
+  border-radius: 10px;
+  border: 3px solid white;
+  margin-bottom: 1em;
+}
+
+.post {
+  border-bottom: 1px solid #eee;
+}
+
+.new-posts-paginator {
+  float: left;
+}
+
+.old-posts-paginator {
+  float: right;
+}
+
+.clearfix {
+  clear: both;
+}

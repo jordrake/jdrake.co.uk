@@ -6,7 +6,12 @@ baseurl: ""
 url: "http://jordrake.github.io"
 twitter_username: jordrake
 github_username:  jordrake
+linkedin_url: "http://uk.linkedin.com/in/jordrake"
 
 # Build settings
 markdown: kramdown
 permalink: pretty
+
+# Pagination
+paginate: 5
+paginate_path: "/page/:num"

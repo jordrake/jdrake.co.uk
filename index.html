@@ -2,21 +2,32 @@
 layout: default
 ---
 
-<div class="home">
+<div class="posts">
+    {% for post in paginator.posts %}
+    <a class="post-link plain-link" href="{{ post.url | prepend: site.baseurl }}">
+        <section class="post">
+            <header class="post-header">
+                <h2 class="post-title">{{ post.title }}</h2>
 
-    <h1>Posts</h1>
+                <p class="post-meta">
+                    {{ post.date | date: "%b %-d, %Y" }}
+                </p>
 
-    <ul class="posts">
-        {% for post in site.posts %}
-        <li>
-            <span class="post-date">{{ post.date | date: "%b %-d, %Y" }}</span>
-            <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        </li>
-        {% endfor %}
-    </ul>
-    {% if !site.posts %}
-    <p>Doesn't look like Jordan's made any blog posts yet!</p>
-    <br/>
-    {% endif %}
-    <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
+                <p class="post-description">{{ post.excerpt }}</p>
+            </header>
+        </section>
+    </a>
+    {% endfor %}
 </div>
+
+{% if paginator.previous_page or paginator.next_page %}
+<div class="pagination">
+    {% if paginator.next_page %}
+    <p class="old-posts-paginator"><a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Older posts</a></p>
+    {% endif %}
+    {% if paginator.previous_page %}
+    <p class="new-posts-paginator"><a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">Newer posts</a></p>
+    {% endif %}
+    <div class="clearfix"></div>
+</div>
+{% endif %}
