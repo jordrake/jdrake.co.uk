@@ -4,19 +4,18 @@ layout: default
 
 <div class="posts">
     {% for post in paginator.posts %}
-    <a class="post-link plain-link" href="{{ post.url | prepend: site.baseurl }}">
         <section class="post">
             <header class="post-header">
-                <h2 class="post-title">{{ post.title }}</h2>
+                <a class="post-link plain-link" href="{{ post.url | prepend: site.baseurl }}"><h2 class="post-title">{{ post.title }}</h2></a>
 
                 <p class="post-meta">
                     {{ post.date | date: "%b %-d, %Y" }}
                 </p>
 
                 <p class="post-description">{{ post.excerpt }}</p>
+                <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">Read more...</a>
             </header>
         </section>
-    </a>
     {% endfor %}
 </div>
 
@@ -31,3 +30,4 @@ layout: default
     <div class="clearfix"></div>
 </div>
 {% endif %}
+
