@@ -42,6 +42,8 @@ body {
         background-color: white;
         border: 3px solid grey;
         transform: translate(-50%, -50%);
+        -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
     }
     .left {
         float: left;
