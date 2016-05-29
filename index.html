@@ -1,33 +1,32 @@
----
-layout: default
----
+<!DOCTYPE html>
+<html>
 
-<div class="posts">
-    {% for post in paginator.posts %}
-        <section class="post">
-            <header class="post-header">
-                <a class="post-link plain-link" href="{{ post.url | prepend: site.baseurl }}"><h2 class="post-title">{{ post.title }}</h2></a>
+<head>
+    <meta charset="UTF-8">
+    <title>Jordan Drake</title>
+    <link rel="stylesheet" type="text/css" href="main.css">
+</head>
 
-                <p class="post-meta">
-                    {{ post.date | date: "%b %-d, %Y" }}
+<body>
+    <canvas class="game-of-life desktop-only"></canvas>
+    <div class="main">
+        <img class="right photo" src="me.jpg" />
+        <div class="left">
+            <div class="about-me">
+                <h1 class="name">Jordan Drake</h1>
+                <h2 class="job">Software Developer</h2>
+                <h3 class="email"><a href="mailto:jordan@jdrake.co.uk" class="email-header">jordan@jdrake.co.uk</a></h3>
+                <p>
+                    Full stack (JavaScript) developer for Sky UK. Contact me via <a href="mailto:jordan@jdrake.co.uk">email</a> or
+                    <a href="https://www.linkedin.com/in/jordrake">LinkedIn</a>. Check out my <a href="https://github.com/jordrake">GitHub</a> for some examples of my code.
                 </p>
+                <p class="desktop-only">Click the background to focus on <a href="https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life">Game of Life</a></p>
+            </div>
+        </div>
+    </div>
+    <script src="game-of-life-logic.js"></script>
+    <script src="game-of-life-ui.js"></script>
+    <script src="game-of-life.js"></script>
+</body>
 
-                <p class="post-description">{{ post.excerpt }}</p>
-                <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">Read more...</a>
-            </header>
-        </section>
-    {% endfor %}
-</div>
-
-{% if paginator.previous_page or paginator.next_page %}
-<div class="pagination">
-    {% if paginator.next_page %}
-    <p class="old-posts-paginator"><a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Older posts</a></p>
-    {% endif %}
-    {% if paginator.previous_page %}
-    <p class="new-posts-paginator"><a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">Newer posts</a></p>
-    {% endif %}
-    <div class="clearfix"></div>
-</div>
-{% endif %}
-
+</html>
