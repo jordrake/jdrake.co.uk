@@ -9,25 +9,30 @@
 </head>
 
 <body>
-    <canvas class="game-of-life desktop-only"></canvas>
-    <div class="main">
-        <img class="right photo" src="me.jpg" />
-        <div class="left">
-            <div class="about-me">
-                <h1 class="name">Jordan Drake</h1>
-                <h2 class="job">Software Developer</h2>
-                <h3 class="email"><a href="mailto:jordan@jdrake.co.uk" class="email-header">jordan@jdrake.co.uk</a></h3>
-                <p>
-                    Full stack (JavaScript) developer for Sky UK. Contact me via <a href="mailto:jordan@jdrake.co.uk">email</a> or
-                    <a href="https://www.linkedin.com/in/jordrake">LinkedIn</a>. Check out my <a href="https://github.com/jordrake">GitHub</a> for some examples of my code.
+    <div class="container">
+        <h1 class="heading">Jordan Drake</h1>
+        <section>
+            <h2 class="subheading">About Me</h2>
+            <div class="content">
+                <p>I am a software developer based in London, originally from West Yorkshire. I work for
+                    <a href="https://www.treatwell.com/jobs/">Treatwell</a>.
                 </p>
-                <p class="desktop-only">Click the background to focus on <a href="https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life">Game of Life</a></p>
+                <p>I specialise in front-end applications but do have considerable back-end experience as well, for a more detailed
+                    breakdown please request my CV.</p>
+                <p>My current technical interests include monadic JavaScript and type safety via TypeScript. I am also a big
+                    fan of metaprogramming including the JavaScript AST and linting rules</p>
             </div>
-        </div>
+        </section>
+        <section>
+            <h2 class="subheading">Links</h2>
+            <ul class="links">
+                <li><a class="link" href="https://github.com/jordrake">Github</a></li>
+                <li><a class="link" href="https://www.linkedin.com/in/jordrake/">LinkedIn</a></li>
+                <li><a class="link" href="https://twitter.com/jordrake">Twitter</a></li>
+                <li><a class="link" href="mailto:jordan@jdrake.co.uk">Email</a></li>
+            </ul>
+        </section>
     </div>
-    <script src="game-of-life-logic.js"></script>
-    <script src="game-of-life-ui.js"></script>
-    <script src="game-of-life.js"></script>
 </body>
 
 </html>
