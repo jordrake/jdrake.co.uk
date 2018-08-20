@@ -5,6 +5,10 @@ body {
     font-size: 18px;
 }
 
+a {
+    color: #FF2353;
+}
+
 .subheading {
     color: #FF2353;
 }
