@@ -4,6 +4,7 @@
   const cssVars = {
     textTransform: sample("none", "lowercase"),
     secondaryColor: sample("#ff2353", "#7055b0", "#ff7a00", "#18B279"),
+    linkRadius: sample("0px", "999px")
   };
 
   function setCssVars(node: HTMLElement) {

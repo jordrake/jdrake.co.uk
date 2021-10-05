@@ -15,6 +15,7 @@
     width: 110px;
     display: inline-block;
     border: 1px solid var(--secondaryColor);
+    border-radius: var(--linkRadius);
     padding: 10px;
     margin-bottom: 10px;
     transition: box-shadow ease 0.5s;
