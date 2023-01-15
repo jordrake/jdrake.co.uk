@@ -1,7 +1,6 @@
 <script lang="ts">
   import Email from "./Email.svelte";
   import Link from "./Link.svelte";
-  import Theme from "./Theme.svelte";
 
   function reload() {
     window.location.reload();
@@ -13,7 +12,6 @@
   <title>Jordan Drake</title>
 </svelte:head>
 
-<Theme />
 <main>
   <h1>Jordan Drake</h1>
   <section>
@@ -26,11 +24,7 @@
       I specialise in front-end applications but do have considerable back-end
       experience as well, for a more detailed breakdown please request my CV. 📜
     </p>
-    <p>
-      This site is built in Svelte for no real reason other than for me to have
-      an excuse to learn and use it. There's some playful theme effects if you
-      <a href="/" on:click={reload}>refresh.</a> 💡
-    </p>
+    <p>This website is built using Svelte.</p>
   </section>
   <section>
     <h2 class="subheading">Links</h2>
@@ -45,15 +39,19 @@
 
 <style>
   :global(body) {
-    text-transform: var(--textTransform);
+    text-transform: lowercase;
     font-family: "Montserrat", sans-serif;
     margin: 0;
     padding: 10px;
     font-size: 18px;
     line-height: 32px;
+
+    --secondaryColor: #ff2353;
   }
 
-  :global(a), :global(a:visited), :global(a:active) {
+  :global(a),
+  :global(a:visited),
+  :global(a:active) {
     color: var(--secondaryColor);
   }
 

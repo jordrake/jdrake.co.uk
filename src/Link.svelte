@@ -4,7 +4,7 @@
 </script>
 
 <li>
-  <a class="link" href={href} on:click={onClick}><slot /></a>
+  <a class="link" {href} on:click={onClick}><slot /></a>
 </li>
 
 <style>
@@ -15,7 +15,7 @@
     width: 110px;
     display: inline-block;
     border: 1px solid var(--secondaryColor);
-    border-radius: var(--linkRadius);
+    border-radius: 25% / 50%;
     padding: 10px;
     margin-bottom: 10px;
     transition: box-shadow ease 0.5s;
